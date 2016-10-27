@@ -1,0 +1,59 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.form-control,
+.btn {
+	border-radius: 0;
+}
+
+.input-group.warning * {
+	border-color: #FFA500;
+}
+
+.input-group.warning input {
+	padding-left: 30px;
+	background-image: url(warning.png);
+	background-repeat-x: 1;
+	background-repeat: no-repeat;
+	background-position: 5px center;
+}
+
+.map-marker {
+	font-weight: bold;
+}
+
+/* Style specific for big screens (tablets, computers) */
+@media (min-width: 768px) {
+	body {
+		height: calc(100% - 10px);
+		padding: 5px;
+	}
+	
+	.input-group {
+		margin-bottom: 10px;
+	}
+	
+	#map {
+	  height: calc(100% - 30px);
+	}
+}
+
+/* Style specific from smalls screens (smartphones) */
+@media (max-width: 768px) {
+	body {
+		height: 100%;
+	}
+	
+	.input-group {
+		margin-bottom: 0;
+		z-index: 5;
+		box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
+	}
+	
+	#map {
+	  height: calc(100% - 20px);
+	}
+}
